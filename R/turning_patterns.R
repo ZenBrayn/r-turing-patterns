@@ -18,7 +18,7 @@ default_params <- function() {
   )
 }
 
-turing_pattern <- function(grid_x, grid_y, n_itr, params = default_params(), rand_seed = 1,
+turing_pattern <- function(grid_x, grid_y, n_itr, params = default_params(), rand_seed = 12345,
                            display_intr_imgs = FALSE, color_vals = gray.colors(255)) {
   set.seed(rand_seed)
 
