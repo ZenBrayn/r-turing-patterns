@@ -4,16 +4,19 @@ Title: Make Turing Pattern Images with R
 Version: 0.1.0
 Author: Ryan Benz
 Maintainer: Ryan Benz <rwbenz@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Description: Compute Turing Pattern images
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
     dplyr,
+    magrittr,
     tibble,
     purrr,
     progress,
     EBImage
 Suggests:
     viridis
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.1.2
