@@ -10,6 +10,8 @@ You can install via GitHub:
 remotes::install_github("ZenBrayn/r-turing-patterns", dependencies = TRUE)
 ```
 
+This package requires the EBImage package, which must be [installed through Bioconductor](https://www.bioconductor.org/packages/release/bioc/html/EBImage.html).
+
 ## Examples
 
 This is a basic example that uses the default paramters.
@@ -32,7 +34,8 @@ save_image(tp_grid, "ex1.png")
 ![](https://github.com/ZenBrayn/r-turing-patterns/blob/master/ex1.png)
 
 By default, the image is display in gray scale, but you can supply your
-own color palette (sequential scales seem to work the best)
+own color palette (sequential scales seem to work the best).  Note: the example images
+below may look different from what you get from running the code on your own computer.
 
 ```
 save_image(tp_grid, "ex2.png", color_values = viridis::viridis(12))
@@ -41,9 +44,13 @@ save_image(tp_grid, "ex2.png", color_values = viridis::viridis(12))
 ![](https://github.com/ZenBrayn/r-turing-patterns/blob/master/ex2.png)
 
 Default parameters are used if not specified in the `turing_pattern` call.
-You can get these parameters through the `default_parameters` function, and
-modify them (or create the parameters data frame yourself -- just use the same
+You can see these parameters through package data variable `default_params`, and
+modify them or create the parameters data frame yourself (just use the same
 column names).
+
+The `act_radius` and `inhib_radius` parameters are in units of the matrix grid,
+which defined by the grid_x and grid_y arguments of the `turing_pattern` function
+call.  The radius parameters values must be smaller than the supplied grid values.
 
 ```
 defaults <- default_params()
