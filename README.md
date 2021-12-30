@@ -1,6 +1,6 @@
 # Generate Turing Patterns in R
 
-This R project generates multi-scale Turing Patterns using the algorithm described [in a blog post by Jason Rampe](https://softologyblog.wordpress.com/2011/07/05/multi-scale-turing-patterns/), and originally detailed in [a paper](http://www.jonathanmccabe.com/Cyclic_Symmetric_Multi-Scale_Turing_Patterns.pdf) by Jonathan McCabe.
+This R project generates multi-scale Turing Patterns using the algorithm described in a [blog post by Jason Rampe](https://softologyblog.wordpress.com/2011/07/05/multi-scale-turing-patterns/), and originally detailed in a [paper by Jonathan McCabe](http://www.jonathanmccabe.com/Cyclic_Symmetric_Multi-Scale_Turing_Patterns.pdf).
 
 ## Installation
 
