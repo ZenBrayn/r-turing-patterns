@@ -19,8 +19,15 @@
 #' @param display_intr_imgs display the image with each computation iteration
 #' @param color_vals vector of color values for image display
 #'
-turing_pattern <- function(grid_x, grid_y, n_itr = 100, params = default_params, rand_seed = 12345,
+turing_pattern <- function(grid_x = 250, grid_y = 250, n_itr = 100, params = default_params, rand_seed = 12345,
                            display_intr_imgs = FALSE, color_vals = gray.colors(255)) {
+  # Information about the computation
+  message("Grid X: ", grid_x)
+  message("Grid Y: ", grid_y)
+  message("# Itr : ", n_itr)
+  message("\nScale Params:")
+  message(paste0(capture.output(data.frame(params)), collapse = "\n"))
+
   set.seed(rand_seed)
 
   # Initialize the grid, size grid_x by grid_y, with random numbers between -1 and 1
@@ -41,7 +48,7 @@ turing_pattern <- function(grid_x, grid_y, n_itr = 100, params = default_params,
   }
 
   pb <- progress::progress_bar$new(
-    format = "  computing [:bar] :percent eta: :eta",
+    format = "computing [:bar] :percent eta: :eta",
     total = n_itr,
     clear = FALSE,
     width = 60
